@@ -33,9 +33,9 @@ services:
      restart: unless-stopped
      volumes:
       - mongo-data:/data/db
-   networks:
+networks:
        ecommerce-network:
          driver: bridge
-   volumes:
+volumes:
        mongo-data:           
       
