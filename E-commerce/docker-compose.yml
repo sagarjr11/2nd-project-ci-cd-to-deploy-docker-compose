@@ -22,7 +22,7 @@ services:
        #- host         # use this for local development
      restart: unless-stopped
      environment:
-      - MONGO_URI=mongodb://mongo:27017/ecommerce
+      - MONGO_URI=mongodb://localhost:27017/ecommerce
      depends_on:
       - mongo
    mongo:
