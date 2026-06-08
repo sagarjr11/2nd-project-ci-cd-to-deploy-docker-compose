@@ -34,8 +34,8 @@ services:
      volumes:
       - mongo-data:/data/db
    networks:
-     ecommerce-network:
-       driver: bridge
+       ecommerce-network:
+         driver: bridge
    volumes:
-      mongo-data:           
+       mongo-data:           
       
