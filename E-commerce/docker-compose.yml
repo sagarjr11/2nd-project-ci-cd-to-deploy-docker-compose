@@ -7,7 +7,7 @@ services:
       - "3001:3001"
      depends_on:
       - backend
-     network_mode: host
+     #network_mode: host
        #- ecommerce-network # use this for Ec2 instances or the actual setup not codespaces setup
        #- host         # use this for local development
      restart: unless-stopped
@@ -17,12 +17,12 @@ services:
      container_name: backend
      ports:
       - "5000:5000"
-     network_mode: host
+     #network_mode: host
        #- ecommerce-network # use this for Ec2 instances or the actual setup not codespaces setup
        #- host         # use this for local development
      restart: unless-stopped
      environment:
-      - MONGO_URI=mongodb://localhost:27017/ecommerce
+      - MONGO_URI=mongodb://mongo:27017/ecommerce
      depends_on:
       - mongo
    mongo:
@@ -30,7 +30,7 @@ services:
      container_name: mongo
      ports:
       - "27017:27017"
-     network_mode: host
+     #network_mode: host
        #- ecommerce-network # use this for Ec2 instances or the actual setup not codespaces setup
        #- host         # use this for local development
      restart: unless-stopped
